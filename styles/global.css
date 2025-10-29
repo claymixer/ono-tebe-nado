@@ -1,13 +1,15 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  width: 1100px;
-  margin: 0 auto;
-  font-family: Raleway, sans-serif;
+    margin: 0 auto;
+    font-family: Raleway, sans-serif;
+    background-color:#fff;
+    min-width: 1020px;
+    max-width: 1100px;
 }
 
 h1,
@@ -21,14 +23,83 @@ ul,
 ol,
 li,
 blockquote {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  color: inherit;
+    color: inherit;
 }
 
 img {
-  width: 100%;
+    width: 100%;
+}
+
+.animated_link, .animated_link-reverse {
+    display: block;
+    position: relative;
+    text-decoration: none !important;
+    width: fit-content !important;
+    cursor: pointer;
+}
+
+.animated_link::after, .animated_link-reverse::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.2s ease;
+}
+
+.animated_link::after {
+    right: 0;
+    width: 0;
+}
+
+.animated_link:hover::after {
+    width: 100%;
+    left: 0;
+    right: unset;
+}
+
+.animated_link-reverse::after {
+    left: 0;
+    width: 100%;
+}
+
+.lots__look-more-link.animated_link-reverse::after {
+    left: 38px;
+    width: calc(100% - 38px);
+}
+
+.animated_link-reverse:hover::after {
+    width: 0;
+    right: 0;
+    left: unset;
+}
+
+.animated_button span {
+    z-index: 1;
+}
+
+.animated_button:hover {
+    color: #000;
+}
+
+.animated_button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #fff;
+    transition: width 0.1s ease;
+    z-index: 0;
+}
+
+.animated_button:hover::before {
+    width: 100%;
+    left: 0;
 }
