@@ -38,8 +38,8 @@ img {
 .animated_link, .animated_link-reverse {
     display: block;
     position: relative;
-    text-decoration: none !important;
-    width: fit-content !important;
+    text-decoration: none;
+    width: fit-content;
     cursor: pointer;
 }
 
@@ -68,15 +68,27 @@ img {
     width: 100%;
 }
 
+.animated_link-reverse:hover::after {
+  width: 0;
+  right: 0;
+  left: unset;
+}
+
 .lots__look-more-link.animated_link-reverse::after {
     left: 38px;
     width: calc(100% - 38px);
 }
 
-.animated_link-reverse:hover::after {
-    width: 0;
-    right: 0;
-    left: unset;
+.header__link_active.animated_link::after {
+  left: 0;
+  width: 100%;
+  right: unset;
+}
+
+.header__link_active.animated_link:hover::after {
+  width: 0;
+  right: 0;
+  left: unset;
 }
 
 .animated_button span {

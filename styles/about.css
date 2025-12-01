@@ -9,7 +9,6 @@
 .about__grid {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 240px 350px;
     grid-template-areas:
     'about__column about__title'
     '. about__text';
@@ -25,6 +24,7 @@
     display: flex;
     position: relative;
     width: 240px;
+    height: 240px;
     border-radius: 50%;
     background-color: #000;
     justify-content: center;

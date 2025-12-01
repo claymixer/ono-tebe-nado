@@ -1,7 +1,6 @@
 .header {
     display:grid;
     grid-template-columns: 1fr 130px 1fr;
-    grid-template-rows: 105px;
     align-items:center;
     font-size: 18px;
     font-weight: 400;

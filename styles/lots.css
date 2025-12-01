@@ -48,20 +48,18 @@
     background-position: center;
     background-size: cover;
     min-height: 563px;
+    transition: background-size 0.2s ease;
 }
 
 .card_type_film {
-    transition: background-size 0.2s ease;
     background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-    transition: background-size 0.2s ease;
     background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-    transition: background-size 0.2s ease;
     background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -71,6 +69,9 @@
     justify-content: space-between;
     align-self: flex-start;
     align-content: flex-start;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 .card__text {
     display: block;
